@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "1f1c2485",
+      "type": "function",
+      "name": "Hello!",
+      "outputs": 1,
+      "memorySize": 128,
+      "timeout": 30,
+      "runtime": "nodejs",
+      "location": "inline",
+      "noerr": true,
+      "x": 410,
+      "y": 220,
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "8fe2282a",
+      "type": "restApi",
+      "method": "GET",
+      "path": "/",
+      "x": 190,
+      "y": 220,
+      "wires": [
+        [
+          "1f1c2485"
+        ]
+      ]
+    },
+    {
+      "id": "776ff687",
+      "type": "function",
+      "name": "Echo",
+      "outputs": 1,
+      "memorySize": 128,
+      "timeout": 30,
+      "runtime": "nodejs",
+      "location": "inline",
+      "noerr": true,
+      "x": 410,
+      "y": 280,
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "f9122a7d",
+      "type": "restApi",
+      "method": "GET",
+      "path": "/{message}",
+      "x": 210,
+      "y": 280,
+      "wires": [
+        [
+          "776ff687"
+        ]
+      ]
+    }
+  ]
+}
